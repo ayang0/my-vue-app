@@ -3,6 +3,15 @@ import { computed, ref } from 'vue'
 import { format } from 'sql-formatter'
 const mybatisLog = ref('')
 const sqlRef = ref('')
+const demoSql = `==>  Preparing: SELECT * FROM test WHERE id = ? AND test = ?
+==> Parameters: 1(Integer), test(String)`
+const demoResult = `SELECT
+  *
+FROM
+  test
+WHERE
+  id = '1'
+  AND test = 'test'`
 const extractSql = computed(() => {
     const regex = /(?<=(Preparing:))(.*)\S/
     const match = mybatisLog.value.match(regex)
@@ -39,19 +48,18 @@ const clear = () => {
 <template>
     <div class="font-sans h-screen flex flex-col">
         <header class="w-full h-1/6 flex justify-evenly items-center">
-            <h1 class="m-0 text-center text-4xl font-bol">Mybatis Sql Log => SQL
-            </h1>
+            <h1 class="m-0 text-center text-4xl font-bol">Mybatis SQL 转换器</h1>
         </header>
         <section class="flex h-5/6 justify-evenly items-center">
             <textarea id="log" v-model="mybatisLog" class="block p-2.5 w-2/5 w h-5/6 textarea textarea-bordered"
-                placeholder="Mybatis Sql Log">
+                :placeholder="demoSql">
             </textarea>
             <div class="flex h-5/6 flex-col justify-evenly">
                 <button @click="bindParameters" class="btn btn-primary">转换</button>
                 <button @click="clear" class="btn btn-secondary">清空</button>
             </div>
             <textarea id="result" v-model="sqlRef" class="block p-2.5 w-2/5 h-5/6 textarea textarea-bordered"
-                placeholder="SQL">
+                :placeholder="demoResult">
             </textarea>
         </section>
     </div>
