@@ -2,27 +2,66 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "AYANG'S DOCS",
-  description: "docs",
+  lang: 'zh-CN',
+  title: "AYANG'S BLOG",
+  description: "技术文档、收藏、生活记录",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    logo: '/saima.png',
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
-    ],
-
-    sidebar: [
+      { text: '主页', link: '/' },
       {
-        text: 'Examples',
+        text: 'Java',
         items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
+          { text: '基础', link: '/java/base' },
+        ]
+      },
+      {
+        text: 'DevOps',
+        items: [
+          { text: 'Gitlab Docker Compose安装', link: '/devops/gitlab-install' },
+        ]
+      },
+      {
+        text: '生活',
+        items: [
+
         ]
       }
     ],
 
+    sidebar: {
+      '/java/': [
+        {
+          text: 'Java',
+          items: [
+            { text: 'Java基础', link: '/java/base' },
+          ]
+        },
+      ],
+      '/devops/': [
+        {
+          text: 'DevOps',
+          items: [
+            { text: 'Gitlab Docker Compose安装', link: '/devops/gitlab-install' },
+          ]
+        },
+      ],
+      '/life/': [
+        {
+          text: '生活',
+          items: [
+          
+          ]
+        }
+      ]
+    },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+      { icon: 'github', link: 'https://github.com/ayang0' }
+    ],
+    footer: {
+      message: '基于 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 发布',
+      copyright: '版权所有 © 2024 <a href="https://github.com/ayang0">AYANG0</a>'
+    }
   }
 })

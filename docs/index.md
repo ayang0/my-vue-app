@@ -3,23 +3,22 @@
 layout: home
 
 hero:
-  name: "AYANG'S DOCS"
-  text: "docs"
-  tagline: My great project tagline
+  name: "AYANG的博客"
+  text: "一个没人知道的地方"
+  tagline: 生活 技术 工作 感悟
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: Java
+      link: /java/base
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: DevOps
+      link: /devops/gitlab-install
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: 技术栈
+    details: Java、Spring Cloud、Mysql、Redis、MQ、JavaScript、Vue、React
+  - title: 云原生
+    details: Docker、Kubernetes、DevOps、Gitlab、CI/CD
+  - title: 生活
+    details: 生活不止眼前的苟且，还有诗和远方
 ---
-
