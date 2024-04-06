@@ -8,6 +8,14 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/saima.png',
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: process.env.API_ID,
+        apiKey: process.env.API_KEY,
+        indexName: process.env.INDEX_NAME,
+      }
+    },
     nav: [
       { text: '主页', link: '/' },
       {
