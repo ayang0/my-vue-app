@@ -7,13 +7,21 @@ lang: zh-CN
 
 # GitLab 安装
 
-GitLab 是一个 DevOps 平台，也称为 GitOps，基于 Git 提交完成CI/CD功能，本文介绍使用 Dokcer-Compose 安装一个 GitLab。
+GitLab 是一个 DevOps 平台，也称为 GitOps，基于 Git 提交完成CI/CD功能，本文介绍使用 Docker-Compose 安装一个 GitLab。
 
-平台：macos-arm64
+## 平台
 
-环境：docker-desktop
+macos-arm64
 
-使用镜像：zengxs/gitlab:ee
+## 环境
+
+docker-desktop
+
+## 使用镜像
+
+zengxs/gitlab:ee
+
+## YAML脚本
 
 ```yaml
 name: gitlab
@@ -52,6 +60,6 @@ volumes:
 >
 > 使用 arm64 架构的镜像，而 GitLab 官方目前没有提供 arm64 架构的镜像，可以使用 Github 相关作者提供的镜像或者自己编译
 
+## 参考
 
-
-[GitLab 官网 Docker 安装教程]: https://docs.gitlab.com/ee/install/docker.html
+- [1]  [GitLab 官网 Docker 安装教程](https://docs.gitlab.com/ee/install/docker.html)
