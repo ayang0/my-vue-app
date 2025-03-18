@@ -22,6 +22,7 @@ export default defineConfig({
         text: 'Java',
         items: [
           { text: '基础', link: '/java/base' },
+          { text: 'custom-spring-boot-starter 官方实践学习', link: '/java/spring-boot-starter' },
         ]
       },
       {
@@ -44,6 +45,7 @@ export default defineConfig({
           text: 'Java',
           items: [
             { text: 'Java基础', link: '/java/base' },
+            { text: 'custom-spring-boot-starter 官方实践学习', link: '/java/spring-boot-starter' },
           ]
         },
       ],
